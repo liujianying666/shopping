@@ -1,3 +1,17 @@
 public class Mango extends Fruits{
-    public Double price=20.0;
+    private Double price;
+
+    public Mango() {
+        this.price = 20.0;
+    }
+
+    @Override
+    public Double getPrice() {
+        return price;
+    }
+
+    @Override
+    public void setPrice(Double price) {
+        this.price = price;
+    }
 }

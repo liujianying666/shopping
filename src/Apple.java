@@ -1,5 +1,17 @@
 import javax.management.remote.SubjectDelegationPermission;
 
 public class Apple extends Fruits{
-    public Double price=8.0;
+    private Double price;
+    public Apple() {
+        this.price = 8.0;
+    }
+    @Override
+    public Double getPrice() {
+        return price;
+    }
+
+    @Override
+    public void setPrice(Double price) {
+        this.price = price;
+    }
 }

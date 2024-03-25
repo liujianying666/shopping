@@ -12,7 +12,7 @@ public class Main {
         Apple apple = new Apple();
         Strawberry strawberry = new Strawberry();
         Mango mango = new Mango();
-        double totalPrice  = appleWeight * apple.price + mangoWeight * mango.price+strawberryWeight*strawberry.price;
+        double totalPrice  = appleWeight * apple.getPrice() + mangoWeight * mango.getPrice()+strawberryWeight*strawberry.getPrice();
         System.out.println(totalPrice);
     }
 
@@ -21,7 +21,7 @@ public class Main {
         Apple apple = new Apple();
         Strawberry strawberry = new Strawberry();
         Mango mango = new Mango();
-        double totalPrice  = appleWeight* apple.price + strawberryWeight * strawberry.price*0.8+mangoWeight*mango.price;
+        double totalPrice  = appleWeight* apple.getPrice() + strawberryWeight * strawberry.getPrice()*0.8+mangoWeight*mango.getPrice();
         System.out.println(totalPrice);
     }
 
@@ -29,13 +29,11 @@ public class Main {
         Apple apple = new Apple();
         Strawberry strawberry = new Strawberry();
         Mango mango = new Mango();
-
-        double totalPrice  = appleWeight * apple.price + strawberryWeight * strawberry.price*0.8+mangoWeight*mango.price;
+        double totalPrice  = appleWeight * apple.getPrice() + strawberryWeight * strawberry.getPrice()*0.8+mangoWeight*mango.getPrice();
         double discountPrice = (int)(totalPrice / 100) * 10;
         BigDecimal bg = new BigDecimal(totalPrice-discountPrice);
         double finalPrice = bg.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
         System.out.println(finalPrice);
     }
-    
     
 }
